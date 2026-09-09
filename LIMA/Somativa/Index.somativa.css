@@ -20,8 +20,8 @@ nav a {
 }
 
 main {
-    padding: 40px 100px 100px 100px;
-    margin: 60px;
+    padding: 40px;
+    margin: 40px;
     background-color: white;
 }
 
@@ -35,3 +35,14 @@ img {
     margin: 0 auto;
 }
 
+p {
+    text-align: left;
+}
+
+section {
+    padding: 40px;
+    margin: 40px;
+    background-color: rgba(221, 255, 255, 0.726);
+     
+
+}
