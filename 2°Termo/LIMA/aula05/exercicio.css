@@ -1,0 +1,63 @@
+body {
+   font-family: Comic Neue;
+    line-height: 20px;
+    background-color: rgb(253, 253, 253);
+}
+
+header {
+  font-family: Comic Neue;
+    line-height: 5px;
+    text-align: center;
+}
+
+nav a {
+   font-family: Comic Neue;;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    background-color: crimson;
+  
+}
+
+h2 {
+    font-family: Comic Neue;
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+section {
+   font-family: Comic Neue;
+    font-size: 20px ;
+    text-align: center;
+      
+
+}
+
+
+section {
+    font-family: Comic Neue;;
+    font-size: 20px ;
+    text-align: center;
+   
+
+}
+
+footer {
+    font-family: Comic Neue;
+    font-size: 20px;
+ 
+    text-align: center;
+
+  
+}
+
+p {
+   font-family: Comic Neue;
+    font-size: 30px;
+   
+}
