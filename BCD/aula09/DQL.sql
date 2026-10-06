@@ -135,11 +135,11 @@ FROM cliente
 WHERE telefone IS NOT NULL;
 
 -- EX 11: ORDER BY - ORDENAR RESULTADOS ASC É CRESCENTE E DESC É DECRESCENTE
-SELECT nome, preco
+SELECT nome_produto, preco
 FROM produto
 ORDER BY preco ASC;
 
-SELECT nome, preco
+SELECT nome_produto, preco
 FROM produto
 ORDER BY preco DESC;
 
@@ -148,18 +148,18 @@ FROM  cliente
 ORDER BY cidade ASC, nome DESC;
 
 -- EX 12: LIMIT - LIMITANDO A QUANTIDADE DE RESULTADOS
-SELECT nome, preco
+SELECT nome_produto, preco
 FROM produto
 ORDER BY preco DESC
 LIMIT 8;
 
-SELECT nome, preco
+SELECT `NOME_PRODUTO`, preco
 FROM produto
-ORDER BY nome
+ORDER BY `NOME_PRODUTO`
 LIMIT 8 OFFSET 8;
 
 -- EX 13: COLUNAS COM CÀCULOS
-SELECT nome, preco, preco * 1.10 AS preco_promocao
+SELECT `NOME_PRODUTO`, preco, preco * 1.10 AS preco_promocao
 FROM produto;
 
 -- CALCULO COM SUBTOTAL
@@ -243,12 +243,13 @@ HAVING condicao_agrupar
 ORDER BY colunas
 LIMIT quantidade;
 
-SELECT nome, cidade, COUNT(*) AS quantidade_clientes
+SELECT  cidade, COUNT(*) AS quantidade_clientes
 FROM cliente
 WHERE cidade = 'Limeira'
 GROUP BY cidade
 HAVING COUNT(*) >= 3
 LIMIT 5;
+
 
 
 
