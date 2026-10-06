@@ -14,8 +14,9 @@ SELECT * FROM cliente;
 SELECT nome,email,ativo FROM cliente;
 
 -- EX 3: ALTAS É UM APELIDO PARA O RESULTADO
-SELECT nome AS Cliente;
-    telefone AS Contato
+
+SELECT nome AS Cliente,
+       telefone AS Contato
 FROM cliente;
 
 SELECT nome AS Cliente,
@@ -51,7 +52,7 @@ SELECT id_pedido, data_pedido, valor_total
 FROM pedido
 WHERE valor_total >= 25.00;
 
-OUTROS OPERADRES DE COMPARAÇÃO
+-- OUTROS OPERADRES DE COMPARAÇÃO
 -- = IGUAL
 -- <>  != DIFERENTE
 -- -> MAIOR
