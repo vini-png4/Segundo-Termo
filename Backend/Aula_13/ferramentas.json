@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "serrote",
+    "quantidade": 1,
+    "custoUnitario": 59.99
+  },
+  {
+    "nome": "marreta",
+    "quantidade": 3,
+    "custoUnitario": 80
+  }
+]
