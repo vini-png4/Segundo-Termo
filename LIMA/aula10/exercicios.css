@@ -1,0 +1,57 @@
+
+
+.flex-equipe1 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+/* justify-content: flex-start; :Ele deslocou os nomes para esquerda */
+/* justify-content: flex-end; :Ele deslocou os nomes para direita */
+/* justify-content: center; :Ele deslocou os nomes para o centro da pagina */
+/* justify-content: space-between; :Ele deslocou o primeiro nome para esquerda o segundo nome para o centro e o terceiro para direita */
+/* justify-content: space-evenly; :Ele deslocou os nomes para o centro da pagina mas diferente do center ele deu um espaçamento maior*/
+
+
+.flex-equipe3 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.flex-equipe3 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.flex-equipe3 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.flex-equipe1 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.flex-equipe1 {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}

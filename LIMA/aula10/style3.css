@@ -1,0 +1,79 @@
+.flexb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 8%;
+    background-color: #cf0000;
+    /*Alinhar itens no sentido horizontal*/
+    /* justify-content: center;
+    justify-content: flex-end; 
+    justify-content: center;
+    justify-content: flex-start; 
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;*/
+}
+
+.menu-f {
+    display: flex;
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.flex-ban {
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    padding: 60px 8%;
+    background-color: rgb(255, 255, 255);
+}
+
+.flex-ban-c, flex-ban-imagem {
+    flex: 1;
+}
+
+.flex-ban-imagem {
+    margin: 0;
+}
+
+.flex-ban-imagem img {
+    width: 100%;
+    display: block;
+}
+
+.flex-cs{
+    display: flex;
+    gap: 23px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-cs > li {
+    flex: 1;
+    min-height: 223px;
+}
+
+.flex-con {
+    display: flex;
+    gap: 43px;
+    align-items: flex-start;
+    padding: 60px 8%;
+}
+
+.flex-con-c, .flex-con form {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.flex-ca {
+    display: flex;
+    height: 200px;
+    /* width: 200px; */
+    background-color: crimson;
+    align-items: flex-start;
+}
