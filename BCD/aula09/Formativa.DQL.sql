@@ -175,4 +175,21 @@ SELECT
 FROM produto
 ORDER BY preco ASC;
 
+-- 25.Consulta autoral
+-- Pergunta de negócio: Quais são os cinco produtos mais vendidos em pedidos finalizados?
+-- Por que essa informação é útil? Permite identificar os produtos mais procurados, melhorar o controle de estoque e orientar as decisões de compra.
 
+SELECT
+    PR.id_produto,
+    PR.nome_produto,
+    SUM(IP.quantidade) AS quantidade_vendida,
+    SUM(IP.quantidade * IP.preco_unitario) AS faturamento
+FROM item_pedido AS IP
+INNER JOIN produto AS PR
+    ON PR.id_produto = IP.id_produto
+INNER JOIN pedido AS P
+    ON P.id_pedido = IP.id_pedido
+WHERE P.status_pedido = 'FINALIZADO'
+GROUP BY PR.id_produto, PR.nome_produto
+ORDER BY quantidade_vendida DESC
+LIMIT 5;
