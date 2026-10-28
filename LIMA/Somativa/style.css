@@ -1,0 +1,129 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+body {
+  background-color: #F4EBD9; 
+}
+
+.cabecalho-container {
+  display: flex;                  
+  justify-content: space-between;
+  align-items: center;            
+  background-color: #8C6239;      
+  padding: 15px 5%;               
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.aang-color {
+  color: #5B3E2B; 
+  margin-left: 5px;
+}
+
+.barra-naveg {
+  display: flex;       
+  align-items: center; 
+  gap: 25px;          
+}
+
+
+.barra-naveg a {
+  color: white;           
+  text-decoration: none;  
+  font-size: 0.9rem;
+  font-weight: 700;       
+}
+
+
+.barra-naveg a.btn-sobre {
+  border: 2px solid #5B3E2B; 
+  padding: 8px 20px;        
+  border-radius: 50px;       
+}
+
+
+.hero-container {
+  display: flex;               
+  align-items: center;          
+  justify-content: space-between;
+  padding: 60px 8%;            
+  background-color: #F4EBD9;    
+  gap: 40px;                   
+}
+
+
+.hero-texto {
+  flex: 1;                     
+}
+
+.subtitulo-tag {
+  background-image: linear-gradient(120deg, #ff882d, #ffbb00, #0458f3, #0044c2);
+    font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+    -webkit-text-fill-color: transparent;
+  color: transparent;
+    -webkit-background-clip: text;
+  background-clip: text;           
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.titulo-principal {
+  color: #FFFFFF;               
+  font-size: 2.8rem;          
+  font-weight: 800;             
+  line-height: 1.1;            
+  margin-bottom: 20px;
+  text-transform: uppercase;    
+}
+
+.descricao {
+  color: #000000;              
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;            
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #5B3E2B;   
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 14px 32px;
+  border-radius: 50px;          
+  transition: transform 0.2s;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);       
+}
+
+
+.hero-imagem {
+  flex: 1;               
+  display: flex;
+  justify-content: center;
+}
+
+.hero-imagem img {
+  width: 100%;                 
+  max-width: 500px;            
+  border-radius: 16px;          
+  object-fit: cover;            
+  box-shadow: 0 10px 30px #d6c49f; 
+}
