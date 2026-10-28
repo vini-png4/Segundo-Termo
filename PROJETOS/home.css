@@ -1,0 +1,454 @@
+
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --vinho: #4a1525;
+    --vinho-claro: #662235;
+    --fundo: #f9f9f9;
+    --fundo-bege: #fffaf5;
+    --fundo-rosado: #f7ebe1;
+    --texto: #333;
+    --texto-secundario: #666;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+figure {
+    min-width: 0;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--vinho);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   2. CABEÇALHO E BANNER
+========================================= */
+
+.cabecalho {
+    width: 100%;
+    background-color: var(--vinho);
+    color: white;
+}
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--fundo-bege);
+}
+
+.banner__imagem {
+    width: 100%;
+}
+
+.banner__imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================
+   3. MENU DE NAVEGAÇÃO
+========================================= */
+
+.menu {
+    width: 100%;
+    background-color: var(--vinho);
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding: 18px 5%;
+}
+
+.menu__lista li {
+    min-width: 0;
+}
+
+.menu__lista a {
+    display: block;
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: normal;
+    transition: color 0.2s ease;
+}
+
+.menu__lista a:hover {
+    color: white;
+}
+
+/* =========================================
+   4. CONTEÚDO PRINCIPAL
+========================================= */
+
+main {
+    width: 100%;
+    min-width: 0;
+}
+
+.servicos {
+    width: 100%;
+    padding: 50px 10%;
+    background-color: var(--fundo-bege);
+}
+
+.servicos__titulo {
+    margin-bottom: 35px;
+    color: var(--vinho);
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   5. GRADE DE SERVIÇOS
+========================================= */
+
+.servicos__grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 35px 30px;
+    width: 100%;
+    max-width: 1500px;
+    margin-inline: auto;
+}
+
+.servico {
+    min-width: 0;
+    scroll-margin-top: 20px;
+}
+
+.servico__figura {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+/* Fotos padronizadas, sem deformação */
+
+.servico__figura img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 15px;
+    background-color: var(--fundo-rosado);
+}
+
+/* Descrição de cada serviço */
+
+.servico__figura figcaption {
+    margin-top: auto;
+    padding: 0 5px;
+    color: var(--texto-secundario);
+    font-size: 13px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   6. RODAPÉ
+========================================= */
+
+.rodape {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 30px;
+    padding: 40px 10%;
+    background-color: #fffcf3;
+    border-top: 1px solid #8d05054b;
+}
+
+.rodape__coluna {
+    min-width: 0;
+}
+
+.rodape__titulo {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.rodape__lista li {
+    margin-bottom: 8px;
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    overflow-wrap: anywhere;
+}
+
+.rodape__lista a:hover {
+    color: var(--vinho);
+}
+
+/* Logo */
+
+.rodape__identidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.rodape__logo {
+    display: block;
+    width: 100%;
+    max-width: 140px;
+}
+
+.rodape__logo img {
+    display: block;
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Redes sociais */
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.redes-sociais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #8d05054b;
+    border-radius: 50%;
+    font-size: 0;
+    transition: background-color 0.2s ease;
+}
+
+.redes-sociais a::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border: 1.5px solid var(--vinho);
+    border-radius: 50%;
+}
+
+.redes-sociais a:hover {
+    background-color: var(--fundo-rosado);
+}
+
+/* Última coluna */
+
+.rodape__coluna:last-child {
+    text-align: right;
+}
+
+/* =========================================
+   7. TABLETS — ATÉ 1024 PX
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .menu__lista {
+        gap: 12px 20px;
+    }
+
+    .servicos {
+        padding: 45px 6%;
+    }
+
+    .servicos__grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 22px;
+    }
+
+    .rodape {
+        gap: 20px;
+        padding: 40px 6%;
+    }
+}
+
+/* =========================================
+   8. CELULARES — ATÉ 600 PX
+========================================= */
+
+@media (max-width: 600px) {
+
+    .banner__imagem img {
+        max-height: none;
+    }
+
+    .menu__lista {
+        gap: 10px 14px;
+        padding: 16px 5%;
+    }
+
+    .menu__lista a {
+        font-size: 13px;
+    }
+
+    .servicos {
+        padding: 35px 6%;
+    }
+
+    .servicos__titulo {
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+
+    /* No celular, os serviços ficam empilhados,
+       seguindo o comportamento da grade da Home */
+
+    .servicos__grade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .servico {
+        width: 100%;
+        max-width: 400px;
+        margin-inline: auto;
+    }
+
+    .servico__figura img {
+        margin-bottom: 12px;
+    }
+
+    .servico__figura figcaption {
+        font-size: 13px;
+    }
+
+    .rodape {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 35px 6%;
+        text-align: center;
+    }
+
+    .rodape__coluna:last-child {
+        text-align: center;
+    }
+
+    .rodape__identidade {
+        grid-row: auto;
+    }
+
+    .rodape__logo {
+        max-width: 120px;
+    }
+
+    .redes-sociais {
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   9. CELULARES ESTREITOS — ATÉ 375 PX
+========================================= */
+
+@media (max-width: 375px) {
+
+    .menu__lista {
+        gap: 9px 12px;
+        padding: 14px 10px;
+    }
+
+    .menu__lista a {
+        font-size: 12px;
+    }
+
+    .servicos {
+        padding: 28px 5%;
+    }
+
+    .servicos__titulo {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+    .servico__figura figcaption {
+        font-size: 12px;
+        letter-spacing: 0.2px;
+    }
+
+    .rodape {
+        padding: 30px 5%;
+    }
+}
+
+/* =========================================
+   10. ACESSIBILIDADE
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

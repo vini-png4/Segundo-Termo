@@ -1,0 +1,148 @@
+{
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+}
+body {
+    font-family: 'Cinzel', 'Playfair Display', 'Georgia', serif;
+    background-color: #f7f1eb; 
+    color: #4a3e3d; 
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+body > header, 
+main, 
+footer {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f7f1eb;
+}
+/* começo */
+header {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    position: relative;
+}
+header figure img {
+    margin: 0 auto 15px auto;
+    max-height: 70px;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(74, 62, 61, 0.2);
+    border-bottom: 1px solid rgba(74, 62, 61, 0.2);
+    padding: 12px 10px;
+}
+header nav ul li a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+/* principal */
+main [banners="Banner de Apresentação"] figure img {
+    width: 100%;
+    object-fit: cover;
+}
+/* servicos */
+[banners="Nossos Serviços"] {
+    padding: 30px 20px;
+}
+[banners="Nossos Serviços"] header h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+[banners="Nossos Serviços"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+}
+[banners="Nossos Serviços"] article figure {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+[banners="Nossos Serviços"] article figure img {
+    width: 100%;
+    aspect-ratio: 3 / 4; 
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+[banners="Nossos Serviços"] figcaption {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    padding: 0 5px;
+    margin-top: auto; 
+}
+/* Rodapé  */
+footer {
+    border-top: 1px solid rgba(74, 62, 61, 0.2);
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas horizontais */
+    align-items: start;
+    gap: 15px;
+}
+footer h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+footer nav[banners="Mapa do Site"] h3 {
+    font-size: 0.8rem;
+}
+footer ul li {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+footer [banners="Identidade Corporativa"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer [banners="Identidade Corporativa"] figure img {
+    max-height: 60px;
+    margin-bottom: 15px;
+}
+footer nav[banners="Redes Sociais"] ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+footer nav[banners="Redes Sociais"] ul li a {
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #4a3e3d; 
+    border-radius: 50%;
+}
+footer section[banners="Lista Rápida de Serviços"] {
+    text-align: right;
+}

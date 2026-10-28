@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* BANNER PRINCIPAL */
+.cabecalho-container {
+    background-color: #4a1525; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+.marcador-logo {
+    width: 100px;
+    height: 40px;
+    background-color: #662235;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.menu-navegacao a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+
+/* BOAS-VINDAS E GALERIA */
+.secao-boas-vindas {
+    text-align: center;
+    padding: 40px 10%;
+    background-color: #fffaf5;
+}
+.subtitulo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+}
+.titulo-principal {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #4a1525;
+}
+.slogan {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 40px;
+}
+.grade-estilos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    list-style: none; /* Remove os pontinhos da lista */
+}
+.marcador-item-grade {
+    aspect-ratio: 3 / 4;
+    background-color: #e0e0e0;
+    border: 1px dashed #b0b0b0;
+}
+/* SOBRE NÓS */
+.secao-sobre {
+    background-color: #f7ebe1; /* Fundo rosado/bege da seção */
+    text-align: center;
+    padding: 50px 15%;
+}
+.titulo-secao {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.texto-sobre {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+.marcador-imagem-sobre {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    background-color: #bdc3c7;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+/* STUDIOS / UNIDADES */
+.secao-estudios {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #fffaf5;
+}
+.grade-estudios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    list-style: none; /* Remove os pontinhos da lista */
+}
+.cartao-estudio {
+    text-align: center;
+}
+.marcador-imagem-estudio {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #e0e0e0;
+    border: 1px dashed #b0b0b0;
+    margin-bottom: 15px;
+}
+.nome-estudio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+/* RODAPÉ */
+.rodape-principal {
+    background-color: #fffcf3;
+    border-top: 1px solid #8d05054b;
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    align-items: flex-start;
+}
+.rodape-coluna h3 {
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.rodape-links a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.rodape-links a:hover {
+    color: #4a1525;
+}
+.logo-rodape {
+    color: #333;
+    margin-bottom: 15px;
+}
+.logo-texto {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    letter-spacing: 2px;
+}
+.logo-rodape p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.logo-rodape small {
+    font-size: 11px;
+    color: #726b6b;
+    font-style: italic;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.icone-social {
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.icone-social:hover {
+    opacity: 1;
+}
+.rodape-servicos-lista {
+    list-style: none;
+}
+.rodape-servicos-lista li {
+    color: #858688;
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.grade-estilos {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.img1 {
+    margin: 0;
+}
+
+.img1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+    
