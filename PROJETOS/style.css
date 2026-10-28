@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* BANNER PRINCIPAL */
+.cabecalho-container {
+    display: flex;
+    background-color: #4a1525; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+.marcador-logo {
+    width: 100px;
+    height: 40px;
+    background-color: #662235;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.menu-navegacao a {
+    display: flex;
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+
+/* BOAS-VINDAS E GALERIA */
+.secao-boas-vindas {
+    text-align: center;
+    padding: 40px 10%;
+    background-color: #fffaf5;
+}
+.subtitulo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+}
+.titulo-principal {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #4a1525;
+}
+.slogan {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 40px;
+}
+.marcador-item-grade {
+    aspect-ratio: 3 / 4;
+    background-color: #e0e0e0;
+    border: 1px dashed #b0b0b0;
+}
+/* SOBRE NÓS */
+.secao-sobre {
+    background-color: #f7ebe1; /* Fundo rosado/bege da seção */
+    text-align: center;
+    padding: 50px 15%;
+}
+.titulo-secao {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.texto-sobre {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+.marcador-imagem-sobre {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    background-color: #bdc3c7;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7f8c8d;
+}
+/* STUDIOS / UNIDADES */
+.secao-estudios {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #fffaf5;
+}
+.grade-estudios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    list-style: none; /* Remove os pontinhos da lista */
+}
+.cartao-estudio {
+    text-align: center;
+}
+.marcador-imagem-estudio {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #e0e0e0;
+    border: 1px dashed #b0b0b0;
+    margin-bottom: 15px;
+}
+.nome-estudio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+/* RODAPÉ */
+.rodape-principal {
+    background-color: #fffcf3;
+    border-top: 1px solid #8d05054b;
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    align-items: flex-start;
+}
+.rodape-coluna h3 {
+    font-size: 14px;
+    color: #555;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.rodape-links a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.rodape-links a:hover {
+    color: #4a1525;
+}
+.logo-rodape {
+    color: #333;
+    margin-bottom: 15px;
+}
+.logo-texto {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    letter-spacing: 2px;
+}
+.logo-rodape p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.logo-rodape small {
+    font-size: 11px;
+    color: #726b6b;
+    font-style: italic;
+}
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.icone-social {
+    text-decoration: none;
+    font-size: 18px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.icone-social:hover {
+    opacity: 1;
+}
+.rodape-servicos-lista {
+    list-style: none;
+}
+.rodape-servicos-lista li {
+    color: #858688;
+    font-size: 12px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.grade-estilos {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.img1 {
+    margin: 0;
+}
+
+.img1 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+    
+
+/* =========================================================
+   AJUSTES RESPONSIVOS — preserva a identidade visual original
+   ========================================================= */
+
+/* Banner principal: ocupa toda a largura sem distorcer */
+.banner-principal {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.banner-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Imagens de conteúdo sempre proporcionais */
+.secao-sobre > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* A colagem 4Modelos.png é uma única imagem, não 4 itens */
+.grade-estilos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.img1 {
+    margin: 0;
+    width: 100%;
+    max-width: 1170px;
+}
+.img1 img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Evita que o menu force a página a ficar mais larga */
+.menu-navegacao {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+.menu-navegacao a {
+    margin-left: 0;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .cabecalho-container { padding: 15px 5%; gap: 20px; }
+    .secao-boas-vindas { padding: 40px 6%; }
+    .secao-sobre { padding: 45px 8%; }
+    .secao-estudios { padding: 45px 6%; }
+    .grade-estudios { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .rodape-principal { padding: 40px 6%; }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .cabecalho-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 18px 5%;
+        gap: 14px;
+    }
+    .marcador-logo { flex-shrink: 0; }
+    .menu-navegacao {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 14px;
+    }
+    .menu-navegacao a { font-size: 13px; }
+
+    .secao-boas-vindas { padding: 32px 5%; }
+    .titulo-principal { font-size: 22px; line-height: 1.3; }
+    .subtitulo { font-size: 11px; }
+    .slogan { font-size: 10px; line-height: 1.6; margin-bottom: 24px; }
+    .grade-estilos { margin-top: 14px; }
+
+    .secao-sobre { padding: 38px 6%; }
+    .titulo-secao { font-size: 19px; }
+    .texto-sobre { font-size: 13px; line-height: 1.7; }
+    .marcador-imagem-sobre { max-width: 100%; }
+
+    .secao-estudios { padding: 38px 6%; }
+    .grade-estudios { grid-template-columns: minmax(0, 1fr); gap: 26px; margin-top: 26px; }
+    .cartao-estudio { width: 100%; max-width: 350px; margin: 0 auto; }
+
+    .rodape-principal {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 35px 6%;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .titulo-principal { font-size: 20px; }
+    .menu-navegacao a { font-size: 12px; }
+    .slogan { letter-spacing: .5px; }
+}
+
+
+/* GRADE DOS ESTÚDIOS */
+.grade-estudios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    list-style: none;
+}
+
+/* CARTÃO */
+.cartao-estudio {
+    text-align: center;
+    min-width: 0;
+}
+
+/* ÁREA DA IMAGEM */
+.marcador-imagem-estudio {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    margin: 0 0 15px;
+    overflow: hidden;
+    background-color: #f7ebe1;
+    border: none;
+}
+
+/* IMAGEM */
+.marcador-imagem-estudio img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* NOME DA UNIDADE */
+.nome-estudio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4a1525;
+    margin-top: 10px;
+}
+
+/* TABLETS */
+@media (max-width: 1024px) {
+    .grade-estudios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .grade-estudios {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 25px;
+    }
+
+    .marcador-imagem-estudio {
+        max-width: 400px;
+        margin: 0 auto 15px;
+    }
+}

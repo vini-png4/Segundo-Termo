@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oficina da Beleza - LR</title>
+  <!-- Ícones do Font Awesome para as redes sociais -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="agendamento.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logotipo principal -->
+    <div class="logo-container">
+      <img src="Lr.png" alt="Oficina da Beleza" class="logo-img">
+    </div>
+    <!-- User/Handle -->
+    <p class="username">@OFICINABELEZA_LR</p>
+    <!-- Botões das Unidades -->
+    <div class="buttons-container">
+      <button class="btn-link" onclick="abrirWhatsApp('Limeira')">
+        <img src="LogoPreto.png" alt="Ícone" class="btn-icon">
+        <span>LR - OFICINA DA BELEZA LIMEIRA</span>
+      </button>
+      <button class="btn-link" onclick="abrirWhatsApp('Campinas')">
+        <img src="LogoPreto.png" alt="Ícone" class="btn-icon">
+        <span>LR - OFICINA DA BELEZA CAMPINAS</span>
+      </button>
+      <button class="btn-link" onclick="abrirWhatsApp('Americana')">
+        <img src="LogoPreto.png" alt="Ícone" class="btn-icon">
+        <span>LR - OFICINA DA BELEZA AMERICANA</span>
+      </button>
+    </div>
+    <!-- Ícones das Redes Sociais no Rodapé -->
+    <div class="social-icons">
+      <button onclick="abrirRedeSocial('tiktok')" aria-label="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </button>
+      <button onclick="abrirRedeSocial('instagram')" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </button>
+      <button onclick="abrirRedeSocial('linkedin')" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

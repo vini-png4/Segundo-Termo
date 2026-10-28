@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F7EBE1; /* Bege claro/Off-white do guia */
+    font-family: Arial, sans-serif; /* Arial SemiBold do guia, usando Arial como fallback */
+    color: #4A3E3D; /* Marrom escuro/Grafite do guia */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/* =========================================
+   2. Cabeçalho (Banner com Logo e Menu)
+   ========================================= */
+.cabecalho-sobre {
+    /* Adicionar uma imagem de banner como no wireframe (substitua o caminho se tiver uma imagem) */
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imagens/banner-sobre.jpg'); 
+    background-color: #4A1525; /* Fallback de cor caso não haja imagem */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Para contraste sobre o banner */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    height: 300px; /* Altura do banner do wireframe */
+    border-bottom: 1px solid black; /* Borda preta fina do wireframe */
+}
+.logo-sobre {
+    text-decoration: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.5rem;
+    color: white; /* Cor da logo sobre o banner */
+    font-weight: normal;
+}
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.menu-navegacao a {
+    text-decoration: none;
+    color: white; /* Cor do menu sobre o banner */
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.menu-navegacao a:hover {
+    color: #C47A7B; /* Rosa queimado do guia */
+}
+.menu-navegacao a.ativo {
+    color: #C47A7B; /* Rosa queimado do guia */
+    border-bottom: 2px solid #C47A7B;
+    padding-bottom: 0.5rem;
+}
+/* =========================================
+   3. Conteúdo Principal (Main e Seções)
+   ========================================= */
+.conteudo-principal {
+    border-left: 1px solid black; /* Borda preta fina do wireframe ao redor do main */
+    border-right: 1px solid black; /* Borda preta fina do wireframe ao redor do main */
+    flex-grow: 1;
+}
+/* Configurações comuns para títulos h1 e h2 das seções */
+main h1, main h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #4A1525; /* Vinho escuro do guia */
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+/* Espaçamento vertical para as seções */
+main section {
+    padding: 6rem 0;
+}
+/* --- Seção Sobre Nós --- */
+.secao-sobre .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secao-sobre .texto-conteudo p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+.secao-sobre .imagem-destaque {
+    margin-top: 4rem;
+    max-width: 900px; /* Largura grande da imagem como no wireframe */
+    border: 1px solid black; /* Borda preta fina do wireframe */
+}
+/* --- Seção Nossa História --- */
+.secao-historia {
+    background-color: #F9F9F9; /* Fundo alternado (quase branco do guia) */
+    border-top: 1px solid black; /* Borda preta fina do wireframe entre as seções */
+    border-bottom: 1px solid black; /* Borda preta fina do wireframe entre as seções */
+}
+.secao-historia .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 4rem;
+    align-items: center;
+}
+.secao-historia .texto-conteudo h2 {
+    text-align: left; /* Título alinhado à esquerda na seção */
+    margin-bottom: 2rem;
+}
+.secao-historia .texto-conteudo p {
+    text-align: justify;
+}
+/* Reordenar os elementos para corresponder ao wireframe (texto à esquerda, imagem à direita) */
+.secao-historia .texto-conteudo {
+    order: 1; /* Texto à esquerda */
+}
+.secao-historia .imagem-destaque {
+    order: 2; /* Imagem à direita */
+    border: 1px solid black; /* Borda preta fina do wireframe */
+}
+/* --- Seção Embelezar e Prosperar --- */
+.secao-prosperar .container {
+    text-align: center;
+}
+/* Estilo para a lista de parágrafos pontilhados */
+.secao-prosperar .lista-pilares {
+    max-width: 800px;
+    margin: 0 auto 6rem auto;
+    text-align: left; /* Alinhamento à esquerda das linhas pontilhadas */
+}
+.secao-prosperar .lista-pilares p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Adicionar o efeito pontilhado */
+.secao-prosperar .lista-pilares p::after {
+    flex-grow: 1;
+    color: #4A3E3D;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.secao-prosperar .galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.secao-prosperar .galeria-fotos figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secao-prosperar .galeria-fotos figure img {
+    border: 1px solid black; 
+}
+.secao-prosperar .galeria-fotos figure figcaption {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #4A1525;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+}
+
+.unhas img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
