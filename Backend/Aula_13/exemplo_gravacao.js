@@ -6,8 +6,7 @@ const maquinasIndustriais = [
     {id: 101, nome: "Torno Mecanico Universal", setor: "Usinagem", operacional: true},
     {id: 102, nome: "Fresadora Ferramentaria", setor: "Usinagem", operacional: false},
     {id: 103, nome: "Prensa Hidraulica 50T", setor: "Estamparia", operacional: true},
-    {id: 104, nome: "Compressor", setor: "Utilidade", operacional: false}
-]
+];
 const dadosParaGravar = JSON.stringify(maquinasIndustriais, null, 2);
 
 const nomeDoArquivo = "maquinas.json";
