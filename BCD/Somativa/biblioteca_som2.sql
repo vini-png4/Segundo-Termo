@@ -70,4 +70,9 @@ WHERE ano_publicacao >= 1943;
 DELETE FROM usuario
 WHERE id_usuario = 4;
 
-UPADTE usuario
+INSERT INTO usuario (nome, email, telefone, ativo) 
+VALUES ('RODRIGO ALVES', 'rodrigo.alves@email.com', '19999999006', TRUE);
+DELETE FROM usuario 
+WHERE email = 'rodrigo.alves@email.com';
+DELETE FROM usuario
+WHERE id_usuario = 1;
