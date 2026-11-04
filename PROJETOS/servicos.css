@@ -196,18 +196,16 @@ main {
     text-transform: uppercase;
     overflow-wrap: break-word;
 }
-
 /* =========================================
    6. RODAPÉ
 ========================================= */
 
 .rodape {
     width: 100%;
-    max-width: none;
     margin: 0;
-    padding: 45px 5%;
+    padding: 50px 5%;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     align-items: start;
     gap: 30px;
     background-color: #f2d3c4;
@@ -216,29 +214,39 @@ main {
 }
 
 .rodape__coluna {
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .rodape__titulo {
     margin-bottom: 18px;
     font-family: "Julius Sans One", "Segoe UI", sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #333;
+    color: #4a1525;
+}
+
+.rodape__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .rodape__lista li {
     margin-bottom: 10px;
     font-family: "Segoe UI", Tahoma, sans-serif;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .rodape__lista a {
+    text-decoration: none;
+    color: #4a3e3d;
     transition: color 0.2s ease;
 }
 
@@ -246,18 +254,16 @@ main {
     color: #8b5b50;
 }
 
-/* LOGO DO RODAPÉ */
+/* LOGO E IDENTIDADE */
 
 .rodape__identidade {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .rodape__logo {
     display: flex;
-    width: 100%;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .rodape__logo img {
@@ -268,9 +274,9 @@ main {
 }
 
 .rodape__frase {
-    margin: 8px 0 18px;
+    margin: 0 0 18px;
     font-family: "Segoe UI", Tahoma, sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-style: italic;
     color: #726b6b;
 }
@@ -279,8 +285,8 @@ main {
 
 .redes-sociais {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 12px;
 }
 
@@ -288,20 +294,33 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
-    overflow: hidden;
+    width: 38px;
+    height: 38px;
     border: 1px solid #a78a7d;
     border-radius: 50%;
     background-color: #fffaf5;
-    font-size: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.redes-sociais a::before {
-    content: "•";
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    color: #4a1525;
+.redes-sociais a:hover {
+    transform: translateY(-2px);
+    background-color: #f7ebe1;
+}
+
+/* RESPONSIVO PARA CELULAR */
+
+@media (max-width: 768px) {
+    .rodape {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .rodape__identidade {
+        order: -1; /* Mantém a logo no topo no mobile */
+    }
 }
 
 /* =========================================

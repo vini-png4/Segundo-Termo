@@ -1,189 +1,453 @@
+/* ==============================
+   RESET GERAL
+============================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #F7EBE1; /* Bege claro/Off-white do guia */
-    font-family: Arial, sans-serif; /* Arial SemiBold do guia, usando Arial como fallback */
-    color: #4A3E3D; /* Marrom escuro/Grafite do guia */
+    background-color: #F7EBE1;
+    color: #4A3E3D;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
+
 p {
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1rem;
 }
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
-/* =========================================
-   2. Cabeçalho (Banner com Logo e Menu)
-   ========================================= */
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
 .cabecalho-sobre {
-    /* Adicionar uma imagem de banner como no wireframe (substitua o caminho se tiver uma imagem) */
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('imagens/banner-sobre.jpg'); 
-    background-color: #4A1525; /* Fallback de cor caso não haja imagem */
+    background-image:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('imagens/banner-sobre.jpg');
+
+    background-color: #4A1525;
     background-size: cover;
     background-position: center;
-    color: white; /* Para contraste sobre o banner */
+
+    color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
     padding: 2rem 5%;
-    height: 300px; /* Altura do banner do wireframe */
-    border-bottom: 1px solid black; /* Borda preta fina do wireframe */
+    min-height: 300px;
+    height: auto;
+
+    border-bottom: 1px solid black;
 }
+
 .logo-sobre {
     text-decoration: none;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 2.5rem;
-    color: white; /* Cor da logo sobre o banner */
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: white;
     font-weight: normal;
 }
+
 .menu-navegacao ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
+
 .menu-navegacao a {
     text-decoration: none;
-    color: white; /* Cor do menu sobre o banner */
+    color: white;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
+
 .menu-navegacao a:hover {
-    color: #C47A7B; /* Rosa queimado do guia */
+    color: #C47A7B;
 }
+
 .menu-navegacao a.ativo {
-    color: #C47A7B; /* Rosa queimado do guia */
+    color: #C47A7B;
     border-bottom: 2px solid #C47A7B;
     padding-bottom: 0.5rem;
 }
-/* =========================================
-   3. Conteúdo Principal (Main e Seções)
-   ========================================= */
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
 .conteudo-principal {
-    border-left: 1px solid black; /* Borda preta fina do wireframe ao redor do main */
-    border-right: 1px solid black; /* Borda preta fina do wireframe ao redor do main */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
     flex-grow: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-/* Configurações comuns para títulos h1 e h2 das seções */
-main h1, main h2 {
+
+main h1,
+main h2 {
     font-family: 'Julius Sans One', sans-serif;
-    color: #4A1525; /* Vinho escuro do guia */
+    color: #4A1525;
     font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
 }
-/* Espaçamento vertical para as seções */
+
 main section {
-    padding: 6rem 0;
+    padding: clamp(2.5rem, 7vw, 6rem) 0;
 }
-/* --- Seção Sobre Nós --- */
+
+/* ==============================
+   SEÇÃO SOBRE NÓS
+============================== */
+
 .secao-sobre .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.secao-sobre .texto-conteudo {
+    width: 100%;
+}
+
 .secao-sobre .texto-conteudo p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
 }
+
 .secao-sobre .imagem-destaque {
-    margin-top: 4rem;
-    max-width: 900px; /* Largura grande da imagem como no wireframe */
-    border: 1px solid black; /* Borda preta fina do wireframe */
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid black;
 }
-/* --- Seção Nossa História --- */
+
+.secao-sobre .imagem-destaque img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ==============================
+   SEÇÃO NOSSA HISTÓRIA
+============================== */
+
 .secao-historia {
-    background-color: #F9F9F9; /* Fundo alternado (quase branco do guia) */
-    border-top: 1px solid black; /* Borda preta fina do wireframe entre as seções */
-    border-bottom: 1px solid black; /* Borda preta fina do wireframe entre as seções */
+    background-color: #F9F9F9;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
+
 .secao-historia .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 4rem;
     align-items: center;
 }
+
+.secao-historia .texto-conteudo {
+    order: 1;
+    min-width: 0;
+}
+
+.secao-historia .imagem-destaque {
+    order: 2;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.secao-historia .imagem-destaque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .secao-historia .texto-conteudo h2 {
-    text-align: left; /* Título alinhado à esquerda na seção */
+    text-align: left;
     margin-bottom: 2rem;
 }
+
 .secao-historia .texto-conteudo p {
     text-align: justify;
 }
-/* Reordenar os elementos para corresponder ao wireframe (texto à esquerda, imagem à direita) */
-.secao-historia .texto-conteudo {
-    order: 1; /* Texto à esquerda */
-}
-.secao-historia .imagem-destaque {
-    order: 2; /* Imagem à direita */
-    border: 1px solid black; /* Borda preta fina do wireframe */
-}
-/* --- Seção Embelezar e Prosperar --- */
+
+/* ==============================
+   SEÇÃO EMBELEZAR E PROSPERAR
+============================== */
+
 .secao-prosperar .container {
     text-align: center;
 }
-/* Estilo para a lista de parágrafos pontilhados */
+
 .secao-prosperar .lista-pilares {
     max-width: 800px;
-    margin: 0 auto 6rem auto;
-    text-align: left; /* Alinhamento à esquerda das linhas pontilhadas */
+    width: 100%;
+    margin: 0 auto 4rem auto;
+    text-align: left;
 }
+
 .secao-prosperar .lista-pilares p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+    margin-bottom: 1.5rem;
 }
-/* Adicionar o efeito pontilhado */
-.secao-prosperar .lista-pilares p::after {
-    flex-grow: 1;
-    color: #4A3E3D;
-    text-align: right;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    white-space: nowrap;
-}
+
+/* ==============================
+   GALERIA DE FOTOS
+============================== */
 
 .secao-prosperar .galeria-fotos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
 }
+
 .secao-prosperar .galeria-fotos figure {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    min-width: 0;
 }
+
 .secao-prosperar .galeria-fotos figure img {
-    border: 1px solid black; 
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid black;
 }
+
 .secao-prosperar .galeria-fotos figure figcaption {
     margin-top: 1.5rem;
     font-weight: bold;
     color: #4A1525;
     font-family: 'Julius Sans One', sans-serif;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.unhas img{
+.unhas img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: auto;
+    object-fit: cover;
+}
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho-sobre {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        min-height: 250px;
+    }
+
+    .menu-navegacao ul {
+        gap: 1.2rem;
+    }
+
+    .secao-historia .container {
+        gap: 2rem;
+    }
+
+    .secao-prosperar .galeria-fotos {
+        gap: 1.5rem;
+    }
+
+}
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    /* Cabeçalho */
+
+    .cabecalho-sobre {
+        min-height: auto;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .logo-sobre {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .menu-navegacao {
+        width: 100%;
+    }
+
+    .menu-navegacao ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .menu-navegacao a {
+        font-size: 0.85rem;
+    }
+
+    /* Títulos */
+
+    main h1,
+    main h2 {
+        font-size: 1.7rem;
+        margin-bottom: 1.8rem;
+    }
+
+    main section {
+        padding: 2.5rem 0;
+    }
+
+    /* Sobre nós */
+
+    .secao-sobre .texto-conteudo p {
+        text-align: left;
+    }
+
+    .secao-sobre .imagem-destaque {
+        margin-top: 1.5rem;
+    }
+
+    /* Nossa história */
+
+    .secao-historia .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .secao-historia .imagem-destaque {
+        order: 1;
+    }
+
+    .secao-historia .texto-conteudo {
+        order: 2;
+    }
+
+    .secao-historia .texto-conteudo h2 {
+        text-align: center;
+    }
+
+    .secao-historia .texto-conteudo p {
+        text-align: left;
+    }
+
+    /* Pilares */
+
+    .secao-prosperar .lista-pilares {
+        margin-bottom: 2.5rem;
+    }
+
+    .secao-prosperar .lista-pilares p {
+        text-align: left;
+        font-size: 0.95rem;
+    }
+
+    /* Galeria */
+
+    .secao-prosperar .galeria-fotos {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .secao-prosperar .galeria-fotos figure {
+        max-width: 100%;
+    }
+
+    .secao-prosperar .galeria-fotos figure img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .secao-prosperar .galeria-fotos figure figcaption {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .conteudo-principal {
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+/* ==============================
+   CELULARES MUITO PEQUENOS
+============================== */
+
+@media (max-width: 380px) {
+
+    .logo-sobre {
+        font-size: 1.4rem;
+    }
+
+    .menu-navegacao ul {
+        gap: 0.8rem;
+    }
+
+    .menu-navegacao a {
+        font-size: 0.75rem;
+    }
+
+    main h1,
+    main h2 {
+        font-size: 1.45rem;
+    }
+
+    .container {
+        padding: 1.2rem;
+    }
+
 }
