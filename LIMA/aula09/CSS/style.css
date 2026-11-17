@@ -1,42 +1,332 @@
-/* header a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
-    font-weight: 500;
+:root {
+    /* Paleta de cores do SmartCoffee */
+    --espresso: #2B170D;
+    --cafe: #5A321B;
+    --caramelo: #C66A1A;
+    --creme: #F3E6D7;
+    --taupe: #9A887A;
+    --marfim: #FFF9F3;
+    --texto: #1E140F;
+    --branco: #FFFFFF;
+
+    /* Definições complementares de borda, sombra, raio e espaçamento */
+    --borda: #E7D8C8;
+    --sombra: 0 14px 34px rgba(43, 23, 13, 0.09);
+    --sombra-hover: 0 18px 42px rgba(43, 23, 13, 0.14);
+    --raio: 14px;
+    --espaco-peq: 8px;
+    --espaco-medio: 16px;
+    --espaco-grande: 24px;
+    --espaco-egrande: 40px;
+    --espaco-xgrande: 64px;
+    --espaco-xxgrande: 80px;
 }
 
-.banner {
-    background-color:#C19A6B;
-} */
-
-.cabecalho {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #2B170D;
-    color: white;
-    text-align: center;
-    padding: 10px;
+/* Reset inicial de layout */
+* {
+    box-sizing: border-box;
 }
 
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    background-color: #2B170D;
-    padding: 10px;
-    text-decoration: none;
+html {
+    scroll-behavior: smooth;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: var(--creme);
+    line-height: 1.6;
 }
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--raio);
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
 ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
 }
 
-h1 {
-    float: left;
-    padding-bottom: 10px;
+h1, h2, h3 {
+    margin-top: 0;
+}
 
+input, textarea, button {
+    font: inherit;
+}
+
+/* Componentes reutilizáveis */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--caramelo);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--raio);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--cafe);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--caramelo);
+    border: 2px solid var(--caramelo);
+}
+
+.btn-outline:hover {
+    background-color: var(--caramelo);
+    color: var(--branco);
+}
+
+.tagline {
+    color: var(--caramelo);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: var(--espaco-peq);
+}
+
+/* Cabeçalho principal */
+/* Cabeçalho Principal */
+.cabecalho-principal {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background-color: #1a0f0a; /* Fundo escuro igual ao da imagem */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logótipo */
+.marca {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.marca span {
+    color: #c66a1a; /* Cor castanha/laranja da palavra Coffee */
+}
+
+/* Menu de Navegação */
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #c66a1a;
+}
+
+/* Banner / Inicio */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--espaco-xxgrande) max(6vw, 24px);
+    gap: var(--espaco-egrande);
+    background-color: var(--marfim);
+}
+
+.banner-conteudo {
+    flex: 1;
+}
+
+.banner-conteudo h1 {
+    font-size: 2.8rem;
+    color: var(--espresso);
+    line-height: 1.2;
+}
+
+.banner-imagem {
+    flex: 1;
+}
+
+/* Sobre */
+.sobre {
+    display: flex;
+    align-items: center;
+    padding: var(--espaco-xxgrande) max(6vw, 24px);
+    gap: var(--espaco-egrande);
+}
+
+.sobre-smartcoffee, .sobre-conteudo {
+    flex: 1;
+}
+
+/* Cafes / Produtos */
+.cafes {
+    padding: var(--espaco-xxgrande) max(6vw, 24px);
+    background-color: var(--marfim);
+    text-align: center;
+}
+
+.lista-cafes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--espaco-grande);
+    margin-top: var(--espaco-egrande);
+}
+
+.card-cafes {
+    background-color: var(--branco);
+    padding: var(--espaco-grande);
+    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-cafes:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-hover);
+}
+
+.card-cafes h3 {
+    margin: var(--espaco-medio) 0 var(--espaco-peq);
+    color: var(--espresso);
+}
+
+.card-cafes strong {
+    display: block;
+    margin-top: var(--espaco-medio);
+    color: var(--caramelo);
+    font-size: 1.2rem;
+}
+
+/* Ambiente */
+.ambiente {
+    display: flex;
+    align-items: center;
+    padding: var(--espaco-xxgrande) max(6vw, 24px);
+    gap: var(--espaco-egrande);
+}
+
+.ambiente-conteudo, .ambiente-imagem {
+    flex: 1;
+}
+
+/* Contato */
+.contato {
+    padding: var(--espaco-xxgrande) max(6vw, 24px);
+    background-color: var(--marfim);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-cabecalho {
+    text-align: center;
+    margin-bottom: var(--espaco-grande);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-medio);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.campo input, .campo textarea {
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    outline: none;
+    background-color: var(--branco);
+}
+
+.campo input:focus, .campo textarea:focus {
+    border-color: var(--caramelo);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--espresso);
+    color: var(--branco);
+    padding: var(--espaco-egrande) max(6vw, 24px);
+    text-align: center;
+}
+
+.marca-rodape {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--espaco-medio);
+}
+
+.menu-rodape {
+    display: flex;
+    justify-content: center;
+    gap: var(--espaco-grande);
+    margin-bottom: var(--espaco-medio);
+}
+
+.menu-rodape a:hover {
+    color: var(--caramelo);
+}
+
+.copyright {
+    color: var(--taupe);
+    font-size: 0.85rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner, .sobre, .ambiente {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cabecalho-principal {
+        flex-direction: column;
+        padding: var(--espaco-medio);
+    }
 }
