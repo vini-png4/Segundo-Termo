@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 20px;
+    background-color: rgb(7, 0, 32);
+}
+
+.inicio {
+    background-image: linear-gradient(100deg, #003049, #D62828, #F77F00, #FCBF49, #EAE2B7);
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.inicio span, .titulo {
+    color: rgb(255, 255, 255);
+    font-family: "Kaushan Script", cursive;
+}
+
+.inicio span {
+    font-weight: 800;
+}
+
+.inicio a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navegacao {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 600;
+}
+
+.conteudo-inicial {
+    background-color: rgb(7, 0, 32);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.conteudo-art {
+    font-family: "Google Sans", sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    padding: 10px;
+    max-width: 50%;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.cartao-img {
+    max-width: 300px;
+    transition: all 0.5s ease;
+}
+
+.cartao-img:hover {
+    box-shadow: 0 10px 24px -8px gray;
+    background: rgb(7, 0, 32);
+    backdrop-filter: blur(14px);
+    transform: translateX(20px) rotate(5deg);
+}
+
+.galeria-conteudo {
+    background-color: rgb(7, 0, 32);
+    margin-top: 40px;
+}
+
+.galeria-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    list-style: none;
+}
+
+.galeria-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.gal-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gal-img figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Google Sans", sans-serif;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gal-img:hover figcaption {
+    transform: translateY(0);
+}
+
+.img-ultimo {
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    /* contain, fill, scale-down none */
+    object-position: center;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+
+}

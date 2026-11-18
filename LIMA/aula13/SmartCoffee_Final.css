@@ -88,6 +88,7 @@ input, textarea, button {
 
 .marca span, .marca-rodape span {
     color: var(--caramelo);
+    align-items: center;
 }
 
 .menu {
